@@ -25,5 +25,13 @@ public class TicTacToeGame {
 		System.out.println("player " + player + " computer " + computer);
 	}
 
+	public void showBoard(char[] board) {
+
+		for (int i = 1; i < board.length; i = i + 3) {
+
+			System.out.println("|" + board[i] + "|" + "|" + board[i + 1] + "|" + "|" + board[i + 2] + "|");
+
+		}
+	}
 	
 }
