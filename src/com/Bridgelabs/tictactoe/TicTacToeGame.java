@@ -13,6 +13,17 @@ public class TicTacToeGame {
 		}
 		return board;
 	}
+	public void makeYourChoice() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter computer player X or O :");
+		player = sc.next().charAt(0);
+
+		if (player == 'X')
+			computer = 'O';
+		else
+			computer = 'X';
+		System.out.println("player " + player + " computer " + computer);
+	}
 
 	
 }

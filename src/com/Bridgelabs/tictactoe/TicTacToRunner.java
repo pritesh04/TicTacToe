@@ -5,5 +5,6 @@ public class TicTacToRunner {
 		
 		TicTacToeGame tacToeGame = new TicTacToeGame();
 		 char board[]=tacToeGame.createBoard();
+		 tacToeGame.makeYourChoice();
 	}
 }
