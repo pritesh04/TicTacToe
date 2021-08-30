@@ -13,6 +13,7 @@ public class TicTacToeGame {
 		}
 		return board;
 	}
+
 	public void makeYourChoice() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter computer player X or O :");
@@ -33,5 +34,13 @@ public class TicTacToeGame {
 
 		}
 	}
-	
+
+	public void setIndex(int index, char[] board) {
+		if (index > 0 && index < 10) {
+			board[index] = player;
+
+		} else
+			System.out.println("Invalid Index");
+
+	}
 }
