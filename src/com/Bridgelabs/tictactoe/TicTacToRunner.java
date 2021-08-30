@@ -8,7 +8,7 @@ public class TicTacToRunner {
 		TicTacToeGame tacToeGame = new TicTacToeGame();
 		 char board[]=tacToeGame.createBoard();
 		 tacToeGame.makeYourChoice();
-		 tacToeGame.showBoard(board);
+		 //tacToeGame.showBoard(board);
 		 Scanner sc= new Scanner(System.in);
 		 System.out.println("ENter the index Number ");
 		 int index= sc.nextInt();

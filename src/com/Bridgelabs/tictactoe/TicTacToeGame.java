@@ -35,10 +35,20 @@ public class TicTacToeGame {
 		}
 	}
 
+	public boolean checkIndex(int index, char[] board) {
+		if (board[index] == ' ') {
+			return true;
+		}
+		return false;
+	}
+
 	public void setIndex(int index, char[] board) {
 		if (index > 0 && index < 10) {
-			board[index] = player;
-
+			if (checkIndex(index, board)) {
+				board[index] = player;
+			} else {
+				System.out.println("Entered Index is not Free");
+			}
 		} else
 			System.out.println("Invalid Index");
 
