@@ -48,7 +48,7 @@ public class TicTacToRunner {
 				else if (tacToeGame.takeCorners(board) || tacToeGame.addCenter(board)) {
 					break;
 				} 
-				
+				else if(tacToeGame.checkBoard(board)) break;
 				
 				
 

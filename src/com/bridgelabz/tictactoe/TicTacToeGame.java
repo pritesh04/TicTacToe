@@ -176,7 +176,14 @@ public class TicTacToeGame {
 		}
 		return false;
 	}
-	
+	public boolean checkBoard(char[] board) {
+		for (int i = 0; i < board.length; i++) {
+			if(board[i]== ' ')
+				return false;
+		}
+		
+		return true;
+	}
 	
 
 }
