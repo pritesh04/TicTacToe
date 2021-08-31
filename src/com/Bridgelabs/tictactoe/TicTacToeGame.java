@@ -44,33 +44,31 @@ public class TicTacToeGame {
 
 	public void setIndex(int index, char[] board) {
 		if (index > 0 && index < 10) {
-			if (checkWin(board)) {
-				if (checkIndex(index, board)) {
-					board[index] = player;
-				} else {
-					System.out.println("Entered Index is not Free ");
-				}
 
-			} else
-				System.out.println("Invalid Index");
+			if (checkIndex(index, board)) {
+				board[index] = player;
+			} else {
+				System.out.println("Entered Index is not Free ");
+			}
+
 		} else
-			System.out.println("win");
+			System.out.println("Invalid Index");
+
 	}
 
 	public void setComputerIndex(char[] board) {
 		int min = 1, max = 9;
 		int index = (int) (Math.random() * (max - min + 1) + min);
 		if (index > 0 && index < 10) {
-			if (checkWin(board)) {
-				if (checkIndex(index, board)) {
-					board[index] = computer;
-				} else {
-					System.out.println("Entered Index is not Free ");
-				}
+
+			if (checkIndex(index, board)) {
+				board[index] = computer;
+			} else {
+				System.out.println("Entered Index is not Free ");
 			}
-				else
-				System.out.println("Wons");
-		 }else {
+		}
+
+		else {
 			System.out.println("Invalid Index");
 		}
 
