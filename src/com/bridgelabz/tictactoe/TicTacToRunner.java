@@ -26,9 +26,7 @@ public class TicTacToRunner {
 			switch (1) {
 
 			case 1:
-				Scanner sc = new Scanner(System.in);
-				System.out.println("ENter the index Number ");
-				int index = sc.nextInt();
+				int index=tacToeGame.playerMove();
 				tacToeGame.setIndex(index, board);
 				tacToeGame.showBoard(board);
 			case 2:
@@ -44,6 +42,11 @@ public class TicTacToRunner {
 				if (tacToeGame.checkTie(board)) {
 					break;
 				}
+				if(tacToeGame.checkOpponent(board))
+				{
+					break;
+				}
+				
 				
 			}
 
