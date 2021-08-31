@@ -94,5 +94,15 @@ public class TicTacToeGame {
 		else
 			return false;
 	}
+	public boolean checkTie(char[] board) {
+		int i;
+		for (i = 1; i <= 9; i++) {
+			if (board[i] == ' ') {
+				return false;
+			}
+		}
+		System.out.println("game has been tied");
+		return true;
+	}
 
 }

@@ -31,6 +31,16 @@ public class TicTacToRunner {
 				int index = sc.nextInt();
 				tacToeGame.setIndex(index, board);
 				tacToeGame.showBoard(board);
+				i++;
+				if(tacToeGame.checkWin(board))
+				{
+					break;
+				}
+				if(tacToeGame.checkTie(board))
+				{
+					break;
+				}
+				
 			}
 
 		}
