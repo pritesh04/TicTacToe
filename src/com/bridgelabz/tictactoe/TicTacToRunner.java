@@ -15,12 +15,14 @@ public class TicTacToRunner {
 			System.out.println("Computer will play first");
 //			tacToeGame.setComputerIndex(board);
 //
+			
 //			tacToeGame.showBoard(board);
 
 		} else {
 			System.out.println("Player will play first");
 
 		}
+		
 		while (true) {
 
 			switch (1) {
@@ -41,19 +43,22 @@ public class TicTacToRunner {
 
 				else if (tacToeGame.checkTie(board)) {
 					break;
-				}
-				else if (tacToeGame.checkOpponent(board)) {
+				} else if (tacToeGame.checkOpponent(board)) {
 					break;
-				}
-				else if (tacToeGame.takeCorners(board) || tacToeGame.addCenter(board)) {
+				} else if (tacToeGame.takeCorners(board) || tacToeGame.addCenter(board)) {
 					break;
-				} 
-				else if(tacToeGame.checkBoard(board)) break;
-				
-				
+				} else if (tacToeGame.checkBoard(board))
+					break;
 
 			}
 
 		}
+		System.out.println("Do you want to play another game");
+		Scanner sc= new Scanner(System.in);
+		String choiceToPlay = sc.nextLine();
+		if(choiceToPlay.equals("yes")) {
+			main(args);
+		}
+
 	}
 }
