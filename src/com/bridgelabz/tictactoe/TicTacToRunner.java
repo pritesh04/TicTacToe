@@ -46,7 +46,12 @@ public class TicTacToRunner {
 				{
 					break;
 				}
-				
+				if(tacToeGame.takeCorners(board))
+				{
+					break;
+				}
+				else
+					System.out.println("No corners are blank");
 				
 			}
 

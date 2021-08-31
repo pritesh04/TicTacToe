@@ -146,6 +146,23 @@ public class TicTacToeGame {
 		return false;
 	}
 
+	public boolean takeCorners(char[] board) {
 
+		if (board[1] != ' ' || board[3] != ' ' || board[7] != ' ' || board[9] != ' ') {
+			if (board[1] == ' ') {
+				board[1] = player;
+			}
+			if (board[3] == ' ') {
+				board[3] = player;
+			}
+			if (board[7] == ' ') {
+				board[7] = player;
+			}
+			if (board[9] == ' ') {
+				board[9] = player;
+			}
+		}
+		return false;
+	}
 
 }
