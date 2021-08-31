@@ -148,21 +148,35 @@ public class TicTacToeGame {
 
 	public boolean takeCorners(char[] board) {
 
-		if (board[1] != ' ' || board[3] != ' ' || board[7] != ' ' || board[9] != ' ') {
-			if (board[1] == ' ') {
-				board[1] = player;
-			}
-			if (board[3] == ' ') {
-				board[3] = player;
-			}
-			if (board[7] == ' ') {
-				board[7] = player;
-			}
-			if (board[9] == ' ') {
-				board[9] = player;
-			}
+		if (board[1] == ' ') {
+			board[1] = player;
+			return true;
+		}
+		if (board[3] == ' ') {
+			board[3] = player;
+			return true;
+		}
+		if (board[7] == ' ') {
+			board[7] = player;
+			return true;
+		}
+		if (board[9] == ' ') {
+			board[9] = player;
+			return true;
+		}
+
+		return false;
+	}
+
+	public boolean addCenter(char[] board) {
+		int position = 5;
+		if (board[position] == ' ') {
+			board[position] = player;
+			return true;
 		}
 		return false;
 	}
+	
+	
 
 }

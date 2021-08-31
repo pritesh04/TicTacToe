@@ -26,7 +26,7 @@ public class TicTacToRunner {
 			switch (1) {
 
 			case 1:
-				int index=tacToeGame.playerMove();
+				int index = tacToeGame.playerMove();
 				tacToeGame.setIndex(index, board);
 				tacToeGame.showBoard(board);
 			case 2:
@@ -39,20 +39,19 @@ public class TicTacToRunner {
 					break;
 				}
 
-				if (tacToeGame.checkTie(board)) {
+				else if (tacToeGame.checkTie(board)) {
 					break;
 				}
-				if(tacToeGame.checkOpponent(board))
-				{
+				else if (tacToeGame.checkOpponent(board)) {
 					break;
 				}
-				if(tacToeGame.takeCorners(board))
-				{
+				else if (tacToeGame.takeCorners(board) || tacToeGame.addCenter(board)) {
 					break;
-				}
-				else
-					System.out.println("No corners are blank");
+				} 
 				
+				
+				
+
 			}
 
 		}
