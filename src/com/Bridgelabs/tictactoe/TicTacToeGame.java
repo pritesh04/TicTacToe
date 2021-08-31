@@ -44,13 +44,57 @@ public class TicTacToeGame {
 
 	public void setIndex(int index, char[] board) {
 		if (index > 0 && index < 10) {
-			if (checkIndex(index, board)) {
-				board[index] = player;
-			} else {
-				System.out.println("Entered Index is not Free");
-			}
+			if (checkWin(board)) {
+				if (checkIndex(index, board)) {
+					board[index] = player;
+				} else {
+					System.out.println("Entered Index is not Free ");
+				}
+
+			} else
+				System.out.println("Invalid Index");
 		} else
+			System.out.println("win");
+	}
+
+	public void setComputerIndex(char[] board) {
+		int min = 1, max = 9;
+		int index = (int) (Math.random() * (max - min + 1) + min);
+		if (index > 0 && index < 10) {
+			if (checkWin(board)) {
+				if (checkIndex(index, board)) {
+					board[index] = computer;
+				} else {
+					System.out.println("Entered Index is not Free ");
+				}
+			}
+				else
+				System.out.println("Wons");
+		 }else {
 			System.out.println("Invalid Index");
+		}
 
 	}
+
+	public boolean checkWin(char[] board) {
+		if (board[1] == board[2] && board[2] == board[3])
+			return true;
+		else if (board[1] == board[5] && board[5] == board[9])
+			return true;
+		else if (board[1] == board[4] && board[4] == board[7])
+			return true;
+		else if (board[2] == board[5] && board[5] == board[8])
+			return true;
+		else if (board[3] == board[5] && board[5] == board[7])
+			return true;
+		else if (board[3] == board[6] && board[6] == board[9])
+			return true;
+		else if (board[4] == board[5] && board[5] == board[6])
+			return true;
+		else if (board[7] == board[8] && board[8] == board[9])
+			return true;
+		else
+			return false;
+	}
+
 }
