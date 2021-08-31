@@ -1,4 +1,4 @@
-package com.Bridgelabs.tictactoe;
+package com.bridgelabz.tictactoe;
 
 import java.util.Scanner;
 
@@ -61,6 +61,23 @@ public class TicTacToeGame {
 		int index = (int) (Math.random() * (max - min + 1) + min);
 		if (index > 0 && index < 10) {
 
+			if (checkIndex(index, board)) {
+				board[index] = computer;
+			} else {
+				System.out.println("Entered Index is not Free ");
+			}
+		}
+
+		else {
+			System.out.println("Invalid Index");
+		}
+
+	}
+	public void setUserIndex(char[] board) {
+		int min = 1, max = 9;
+		int index = (int) (Math.random() * (max - min + 1) + min);
+		if (index > 0 && index < 10) {
+			
 			if (checkIndex(index, board)) {
 				board[index] = computer;
 			} else {
