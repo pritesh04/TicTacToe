@@ -24,25 +24,21 @@ public class TicTacToRunner {
 				System.out.println("Player will play first");
 
 			}
-			int i = 1;
-			while (i <= 9) {
-				Scanner sc = new Scanner(System.in);
-				System.out.println("ENter the index Number ");
-				int index = sc.nextInt();
-				tacToeGame.setIndex(index, board);
-				tacToeGame.showBoard(board);
-				i++;
-				if(tacToeGame.checkWin(board))
-				{
-					break;
-				}
-				if(tacToeGame.checkTie(board))
-				{
-					break;
-				}
-				
+			Scanner sc = new Scanner(System.in);
+			System.out.println("ENter the index Number ");
+			int index = sc.nextInt();
+			tacToeGame.setIndex(index, board);
+			tacToeGame.showBoard(board);
+			if (tacToeGame.checkWin(board)) {
+				System.out.println("Wins");
+				break;
+			}
+
+			if (tacToeGame.checkTie(board)) {
+				break;
 			}
 
 		}
+
 	}
 }

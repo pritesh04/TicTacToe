@@ -77,26 +77,25 @@ public class TicTacToeGame {
 	public boolean checkWin(char[] board) {
 		if (board[1] == board[2] && board[2] == board[3])
 			return true;
-		else if (board[1] == board[5] && board[5] == board[9])
+		else if (board[1] == board[5] && board[5] == board[9] && board[9]!=' ')
 			return true;
-		else if (board[1] == board[4] && board[4] == board[7])
+		else if (board[1] == board[4] && board[4] == board[7]&& board[7]!=' ')
 			return true;
-		else if (board[2] == board[5] && board[5] == board[8])
+		else if (board[2] == board[5] && board[5] == board[8]&& board[8]!=' ')
 			return true;
-		else if (board[3] == board[5] && board[5] == board[7])
+		else if (board[3] == board[5] && board[5] == board[7]&& board[7]!=' ')
 			return true;
-		else if (board[3] == board[6] && board[6] == board[9])
+		else if (board[3] == board[6] && board[6] == board[9]&& board[9]!=' ')
 			return true;
-		else if (board[4] == board[5] && board[5] == board[6])
+		else if (board[4] == board[5] && board[5] == board[6]&& board[6]!=' ')
 			return true;
-		else if (board[7] == board[8] && board[8] == board[9])
+		else if (board[7] == board[8] && board[8] == board[9]&& board[9]!=' ')
 			return true;
 		else
 			return false;
 	}
 	public boolean checkTie(char[] board) {
-		int i;
-		for (i = 1; i <= 9; i++) {
+		for (int i = 1; i <= 9; i++) {
 			if (board[i] == ' ') {
 				return false;
 			}
